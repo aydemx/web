@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0D0D11" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="AydemX" />
+  <meta name="description" content="AydemX — Yapay zeka destekli yeni nesil yazılımlar. VocaX Pro Plus ve Cari Pro Plus çok yakında Google Play Store ve App Store'da. Gizlilik Politikası ve kurumsal iletişim: iletisim@aydemx.com" />
+  <meta name="keywords" content="AydemX, VocaX Pro Plus, Cari Pro Plus, yapay zeka, sesli not, cari hesap, Google Play, gizlilik politikası" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="tr_TR" />
+  <meta property="og:site_name" content="AydemX" />
+  <meta property="og:title" content="AydemX — Yapay Zeka Destekli Yeni Nesil Yazılımlar" />
+  <meta property="og:description" content="Sesli Düşün, Şık Not Al. İşlerinizi, borç ve alacaklarınızı yapay zeka gücüyle zahmetsizce yönetin. Çok yakında." />
+  <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%230D0D11'/%3E%3Ctext x='600' y='330' text-anchor='middle' fill='%23C9A86A' font-size='72' font-family='Georgia,serif'%3EAydemX%3C/text%3E%3C/svg%3E" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AydemX — Yapay Zeka Destekli Yeni Nesil Yazılımlar" />
+  <meta name="twitter:description" content="VocaX Pro Plus ve Cari Pro Plus çok yakında. Sesli Düşün, Şık Not Al." />
+  <title>AydemX — Yapay Zeka Destekli Yeni Nesil Yazılımlar | Çok Yakında</title>
+  <link rel="canonical" href="https://aydemx.com/" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23E8D5A3'/%3E%3Cstop offset='100%25' stop-color='%23C9A86A'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%230D0D11'/%3E%3Crect x='2' y='2' width='60' height='60' rx='14' fill='none' stroke='url(%23g)' stroke-width='1.5'/%3E%3Ctext x='32' y='42' text-anchor='middle' fill='url(%23g)' font-size='28' font-family='Georgia,serif' font-weight='700'%3EAX%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#0D0D11",
+            inksoft: "#14141B",
+            gold: "#C9A86A",
+            champagne: "#E8D5A3",
+            mist: "#A1A1AA",
+            ivory: "#F4F1EA"
+          },
+          fontFamily: {
+            sans: ["Plus Jakarta Sans", "system-ui", "Segoe UI", "sans-serif"],
+            display: ["Syne", "Plus Jakarta Sans", "sans-serif"]
+          },
+          boxShadow: {
+            glow: "0 0 80px rgba(201, 168, 106, 0.18)",
+            badge: "0 0 24px rgba(201, 168, 106, 0.22)"
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    :root {
+      --ink: #0D0D11;
+      --gold: #C9A86A;
+      --champagne: #E8D5A3;
+    }
+
+    html,
+    body {
+      background: #0D0D11;
+      color: #F4F1EA;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .ambient {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(900px 520px at 50% -8%, rgba(201, 168, 106, 0.14), transparent 58%),
+        radial-gradient(620px 420px at 88% 18%, rgba(92, 78, 140, 0.16), transparent 62%),
+        radial-gradient(520px 360px at 8% 78%, rgba(201, 168, 106, 0.07), transparent 70%),
+        #0D0D11;
+    }
+
+    .grid-veil {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 20%, transparent 78%);
+    }
+
+    .noise {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.045;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    .page {
+      position: relative;
+      z-index: 2;
+    }
+
+    .logo-mark {
+      box-shadow: 0 0 0 1px rgba(201, 168, 106, 0.35), 0 0 28px rgba(201, 168, 106, 0.22);
+      animation: markPulse 4.8s ease-in-out infinite;
+    }
+
+    .logo-word {
+      background: linear-gradient(180deg, #F7E7C0 0%, #C9A86A 72%, #A8894A 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 28px rgba(201, 168, 106, 0.22);
+    }
+
+    @keyframes markPulse {
+      0%, 100% { box-shadow: 0 0 0 1px rgba(201, 168, 106, 0.32), 0 0 22px rgba(201, 168, 106, 0.16); }
+      50% { box-shadow: 0 0 0 1px rgba(232, 213, 163, 0.55), 0 0 36px rgba(201, 168, 106, 0.34); }
+    }
+
+    .hero-title {
+      letter-spacing: -0.035em;
+      text-wrap: balance;
+    }
+
+    .status-badge {
+      background: linear-gradient(180deg, rgba(201, 168, 106, 0.12), rgba(20, 20, 27, 0.72));
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 0 24px rgba(201, 168, 106, 0.12);
+    }
+
+    .store-btn {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.02));
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+
+    .store-btn::after {
+      content: "";
+      position: absolute;
+      inset: -40% auto -40% -40%;
+      width: 40%;
+      background: linear-gradient(90deg, transparent, rgba(232, 213, 163, 0.16), transparent);
+      animation: shimmer 5.5s ease-in-out infinite;
+    }
+
+    @keyframes shimmer {
+      0% { transform: translateX(0); }
+      60%, 100% { transform: translateX(420%); }
+    }
+
+    .fade-up {
+      animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    .d1 { animation-delay: 0.05s; }
+    .d2 { animation-delay: 0.16s; }
+    .d3 { animation-delay: 0.28s; }
+    .d4 { animation-delay: 0.4s; }
+    .d5 { animation-delay: 0.52s; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    #gizlilik {
+      display: none;
+    }
+
+    #gizlilik:target {
+      display: block;
+      position: fixed;
+      inset: 0;
+      z-index: 30;
+      overflow-y: auto;
+      background: #0D0D11;
+    }
+
+    body:has(#gizlilik:target) #landing {
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .policy h2 {
+      font-family: Syne, Plus Jakarta Sans, sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #E8D5A3;
+      margin-top: 2rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .policy p,
+    .policy li {
+      color: #C4C0B6;
+      line-height: 1.75;
+      font-size: 0.95rem;
+    }
+
+    .policy ul {
+      list-style: disc;
+      padding-left: 1.25rem;
+      margin: 0.6rem 0 1rem;
+    }
+
+    .policy li + li {
+      margin-top: 0.35rem;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fade-up,
+      .logo-mark,
+      .store-btn::after {
+        animation: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="font-sans antialiased">
+  <div class="ambient" aria-hidden="true"></div>
+  <div class="grid-veil" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <div id="landing" class="page min-h-screen flex flex-col">
+    <header class="w-full">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6 sm:px-8 sm:py-8">
+        <a href="#landing" class="group flex items-center gap-3" aria-label="AydemX ana sayfa">
+          <span class="logo-mark relative flex h-11 w-11 items-center justify-center rounded-2xl bg-[#121218] ring-1 ring-gold/40">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M13 3.2L21.4 22.2H17.85L16.15 18.05H9.85L8.15 22.2H4.6L13 3.2Z" fill="url(#axg)" />
+              <path d="M11.15 14.85H14.85L13 10.2L11.15 14.85Z" fill="#0D0D11" />
+              <defs>
+                <linearGradient id="axg" x1="4.6" y1="3.2" x2="21.4" y2="22.2" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#F7E7C0" />
+                  <stop offset="1" stop-color="#C9A86A" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+          <span class="flex flex-col leading-none">
+            <span class="logo-word font-display text-[1.35rem] font-extrabold tracking-tight">AydemX</span>
+            <span class="mt-1 text-[10px] font-medium uppercase tracking-[0.22em] text-mist/80">Yazılım · İstanbul</span>
+          </span>
+        </a>
+        <div class="hidden items-center gap-2 text-[11px] font-medium uppercase tracking-[0.18em] text-mist/70 sm:flex">
+          <i class="fa-solid fa-shield-halved text-gold/80" aria-hidden="true"></i>
+          <span>Kurumsal Geliştirici</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex flex-1 flex-col items-center justify-center px-6 pb-16 pt-6 sm:px-8 sm:pb-20 sm:pt-4">
+      <div class="mx-auto flex w-full max-w-4xl flex-col items-center text-center">
+        <div class="status-badge fade-up d1 mb-8 inline-flex max-w-full items-center gap-2.5 rounded-full border border-gold/25 px-4 py-2 text-left backdrop-blur-md sm:px-5">
+          <span class="text-base leading-none" aria-hidden="true">🛠️</span>
+          <span class="text-[12px] font-semibold tracking-wide text-champagne sm:text-[13px]">Geliştirme Aşamasında / Google Play Store Entegrasyonu Başladı</span>
+        </div>
+
+        <h1 class="hero-title fade-up d2 font-display text-[2.05rem] font-extrabold leading-[1.12] text-ivory sm:text-5xl md:text-[3.35rem]">
+          Yapay Zeka Destekli Yeni Nesil Yazılımlar <span class="logo-word">Çok Yakında</span>
+        </h1>
+
+        <p class="fade-up d3 mx-auto mt-6 max-w-2xl text-[1.05rem] font-medium leading-relaxed text-mist sm:text-lg">
+          Sesli Düşün, Şık Not Al. İşlerinizi, borç ve alacaklarınızı yapay zeka gücüyle zahmetsizce yönetin.
+        </p>
+
+        <div class="fade-up d4 mt-8 flex flex-wrap items-center justify-center gap-3">
+          <span class="rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-champagne/90">VocaX Pro Plus</span>
+          <span class="h-1 w-1 rounded-full bg-gold/50" aria-hidden="true"></span>
+          <span class="rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-champagne/90">Cari Pro Plus</span>
+        </div>
+
+        <div class="fade-up d5 mt-12 flex w-full max-w-xl flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
+          <button type="button" disabled aria-disabled="true" class="store-btn group flex cursor-not-allowed items-center justify-between gap-4 rounded-2xl border border-white/10 px-5 py-4 opacity-70 sm:flex-1">
+            <span class="flex items-center gap-3.5">
+              <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-white/[0.06] text-champagne">
+                <i class="fa-brands fa-google-play text-lg" aria-hidden="true"></i>
+              </span>
+              <span class="text-left">
+                <span class="block text-[10px] font-semibold uppercase tracking-[0.18em] text-gold">Çok Yakında</span>
+                <span class="mt-0.5 block text-sm font-semibold text-ivory">Google Play Store</span>
+              </span>
+            </span>
+            <i class="fa-solid fa-lock text-[11px] text-mist/60" aria-hidden="true"></i>
+          </button>
+
+          <button type="button" disabled aria-disabled="true" class="store-btn group flex cursor-not-allowed items-center justify-between gap-4 rounded-2xl border border-white/10 px-5 py-4 opacity-70 sm:flex-1">
+            <span class="flex items-center gap-3.5">
+              <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-white/[0.06] text-champagne">
+                <i class="fa-brands fa-apple text-xl" aria-hidden="true"></i>
+              </span>
+              <span class="text-left">
+                <span class="block text-[10px] font-semibold uppercase tracking-[0.18em] text-gold">Çok Yakında</span>
+                <span class="mt-0.5 block text-sm font-semibold text-ivory">App Store</span>
+              </span>
+            </span>
+            <i class="fa-solid fa-lock text-[11px] text-mist/60" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <p class="mt-5 text-xs text-mist/60">Mağaza bağlantıları yayına alındığında bu alanda etkinleşecektir.</p>
+      </div>
+    </main>
+
+    <footer class="mt-auto border-t border-white/[0.06]">
+      <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-7 text-center sm:flex-row sm:px-8 sm:text-left">
+        <p class="text-[12px] text-mist/70">© 2026 AydemX. Tüm hakları saklıdır.</p>
+        <div class="flex flex-col items-center gap-3 sm:flex-row sm:gap-6">
+          <a href="#gizlilik" class="text-[12px] font-medium text-champagne/90 underline-offset-4 transition hover:text-champagne hover:underline">
+            Gizlilik Politikası (Privacy Policy)
+          </a>
+          <a href="mailto:iletisim@aydemx.com" class="text-[12px] font-medium text-mist transition hover:text-ivory">
+            <i class="fa-regular fa-envelope mr-1.5 text-gold/80" aria-hidden="true"></i>iletisim@aydemx.com
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <section id="gizlilik" class="page min-h-screen" aria-labelledby="privacy-title">
+    <header class="border-b border-white/[0.06]">
+      <div class="mx-auto flex max-w-3xl items-center justify-between px-6 py-6 sm:px-8">
+        <a href="#landing" class="flex items-center gap-3" aria-label="AydemX ana sayfaya dön">
+          <span class="logo-mark relative flex h-10 w-10 items-center justify-center rounded-2xl bg-[#121218] ring-1 ring-gold/40">
+            <svg width="22" height="22" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M13 3.2L21.4 22.2H17.85L16.15 18.05H9.85L8.15 22.2H4.6L13 3.2Z" fill="url(#axg2)" />
+              <path d="M11.15 14.85H14.85L13 10.2L11.15 14.85Z" fill="#0D0D11" />
+              <defs>
+                <linearGradient id="axg2" x1="4.6" y1="3.2" x2="21.4" y2="22.2" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#F7E7C0" />
+                  <stop offset="1" stop-color="#C9A86A" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+          <span class="logo-word font-display text-lg font-extrabold tracking-tight">AydemX</span>
+        </a>
+        <a href="#landing" class="text-[12px] font-medium text-mist transition hover:text-ivory">
+          <i class="fa-solid fa-arrow-left mr-1.5" aria-hidden="true"></i>Ana sayfa
+        </a>
+      </div>
+    </header>
+
+    <article class="policy mx-auto max-w-3xl px-6 pb-20 pt-10 sm:px-8">
+      <p class="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-gold">Yasal · Legal</p>
+      <h1 id="privacy-title" class="font-display text-3xl font-extrabold tracking-tight text-ivory sm:text-4xl">
+        Gizlilik Politikası (Privacy Policy)
+      </h1>
+      <p class="mt-3 text-sm text-mist">Son güncelleme: 4 Eylül 2026 · Yürürlük tarihi: 4 Eylül 2026</p>
+      <p class="mt-6">
+        Bu Gizlilik Politikası, AydemX (“Şirket”, “biz”, “bize” veya “bizim”) tarafından geliştirilen web sitesi, yaklaşan mobil uygulamalar ve ilgili dijital hizmetler (birlikte “Hizmetler”) kapsamında kişisel verilerin nasıl toplandığını, işlendiğini, saklandığını ve korunduğunu açıklar. Politika; VocaX Pro Plus, Cari Pro Plus ve aydemx.com üzerindeki kurumsal tanıtım sayfası için geçerlidir.
+      </p>
+      <p>
+        Hizmetlerimizi kullanarak veya Google Play Store / App Store üzerinden uygulamalarımızı indirerek bu politikada belirtilen uygulamaları kabul etmiş sayılırsınız. Metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK), ilgili ikincil mevzuat ve Google Play Kullanıcı Verileri politikası ile uyumlu olacak şekilde hazırlanmıştır.
+      </p>
+
+      <h2>1. Veri Sorumlusu</h2>
+      <p>
+        Kişisel verileriniz bakımından veri sorumlusu AydemX’tir. Kurumsal başvurular ve KVKK kapsamındaki talepler için iletişim adresi: <a href="mailto:iletisim@aydemx.com" class="text-champagne underline-offset-4 hover:underline">iletisim@aydemx.com</a>
+      </p>
+
+      <h2>2. Topladığımız Veriler</h2>
+      <p>Hizmetin türüne ve sizin verdiğiniz izinlere göre aşağıdaki veri kategorileri işlenebilir:</p>
+      <ul>
+        <li><strong class="text-ivory/90">Hesap ve kimlik verileri:</strong> ad-soyad, e-posta adresi, isteğe bağlı profil bilgileri.</li>
+        <li><strong class="text-ivory/90">İletişim verileri:</strong> destek taleplerinde paylaştığınız e-posta içeriği ve ekler.</li>
+        <li><strong class="text-ivory/90">Cihaz ve teknik veriler:</strong> cihaz modeli, işletim sistemi sürümü, uygulama sürümü, dil ve ülke ayarı, çökme günlükleri, performans metrikleri.</li>
+        <li><strong class="text-ivory/90">Kullanım verileri:</strong> özelliklerin ne sıklıkla kullanıldığı, oturum süresi, hata kodları. Bu veriler mümkün olduğunca kimliksizleştirilir.</li>
+        <li><strong class="text-ivory/90">VocaX Pro Plus’a özgü içerik:</strong> sizin başlattığınız ses kayıtları, dönüştürülen metinler ve notlar yalnızca sizin talimatınızla işlenir. Mikrofon erişimi, işletim sistemi izin ekranı üzerinden açık rızanıza bağlıdır ve arka planda gizli dinleme yapılmaz.</li>
+        <li><strong class="text-ivory/90">Cari Pro Plus’a özgü iş verileri:</strong> sizin girdiğiniz cari kartlar, borç-alacak kayıtları, fatura/ödeme notları ve etiketler. Bu veriler hesabınıza bağlı iş kayıtlarıdır; reklam amacıyla satılmaz.</li>
+        <li><strong class="text-ivory/90">Satın alma verileri:</strong> abonelik veya uygulama içi satın alma işlemleri Google Play / App Store altyapısı üzerinden yürür. Kart numarası gibi ödeme kimlik bilgilerini AydemX saklamaz.</li>
+      </ul>
+      <p>Zorunlu olmayan verileri paylaşmamayı tercih edebilirsiniz; bu durumda bazı özellikler sınırlı çalışabilir.</p>
+
+      <h2>3. Verileri İşleme Amaçlarımız</h2>
+      <ul>
+        <li>Uygulamaları sağlamak, hesap oluşturmak ve oturumu sürdürmek.</li>
+        <li>Ses-metin dönüştürme, not düzenleme, cari hesap özeti ve yapay zeka destekli öneriler sunmak.</li>
+        <li>Hataları gidermek, güvenliği sağlamak ve hizmet kalitesini artırmak.</li>
+        <li>Yasal yükümlülükleri yerine getirmek ve kötüye kullanımı önlemek.</li>
+        <li>Sizin açık talebiniz üzerine destek ve bilgilendirme sağlamak.</li>
+      </ul>
+      <p>Kişisel verileriniz, açık rızanız veya kanunen öngörülen başka bir hukuki sebep olmaksızın üçüncü kişilere pazarlama listesi olarak satılmaz veya kiralanmaz.</p>
+
+      <h2>4. Yapay Zeka İşleme</h2>
+      <p>
+        Belirli özellikler, metin özetleme, sınıflandırma veya sesin yazıya dönüştürülmesi için yapay zeka modelleri kullanabilir. Bu işlemler yalnızca ilgili özelliği sizin başlattığınızda gerçekleşir. Model eğitimi için kullanıcı içeriklerinin izinsiz kullanılması hedeflenmez. Üçüncü taraf model sağlayıcıları kullanılması halinde, bunlara yalnızca özelliğin çalışması için gerekli asgari veri aktarılır ve sözleşmesel gizlilik yükümlülükleri aranır.
+      </p>
+
+      <h2>5. Üçüncü Taraflar ve Aktarımlar</h2>
+      <p>Hizmetin sunulması için sınırlı sayıda güvenilir alt işleyen kullanılabilir:</p>
+      <ul>
+        <li>Google Play Store ve Apple App Store (dağıtım, güncelleme, faturalama).</li>
+        <li>Bulut barındırma ve yedekleme hizmetleri (verilerin şifreli saklanması için).</li>
+        <li>Çökme ve performans analitiği sağlayıcıları (kimliksizleştirilmiş teknik kayıtlar).</li>
+        <li>Yapay zeka çıkarım altyapısı (yalnızca ilgili özelliğin çalışması için).</li>
+      </ul>
+      <p>
+        Veriler, hizmetin teknik gereği ölçüsünde Türkiye içinde veya yeterli koruma taahhütleri bulunan yurt dışı sunucularda işlenebilir. Aktarımlarda KVKK’nın yurt dışı aktarım hükümleri ve uygun hukuki güvenceler esas alınır.
+      </p>
+
+      <h2>6. Çerezler ve Benzer Teknolojiler</h2>
+      <p>
+        aydemx.com kurumsal tanıtım sitesi zorunlu oturum ve güvenlik çerezleri dışında reklam çerezi kullanmaz. Mobil uygulamalarda reklam kimliği toplamak veya kişiselleştirilmiş reklam ağı işletmek bu politikanın yayım tarihinde amaçlanmamaktadır. Bu durum değişirse politika güncellenir ve gerektiğinde ek izin istenir.
+      </p>
+
+      <h2>7. Saklama Süresi</h2>
+      <p>
+        Kişisel veriler, işleme amacının gerektirdiği süre ve yasal zamanaşımı süreleri ile sınırlı olarak saklanır. Hesabınızı silmeniz halinde, yasal saklama yükümlülüğü bulunmayan içerikler makul bir süre içinde silinir veya kimliksizleştirilir. Cihazınızda yerel olarak tutulan not ve cari kayıtları, uygulamayı kaldırmanız veya ilgili silme işlevini kullanmanızla birlikte cihazınızdan kaldırılabilir.
+      </p>
+
+      <h2>8. Güvenlik</h2>
+      <p>
+        AydemX; aktarım sırasında TLS/HTTPS, erişim yetkilendirme, asgari yetki ilkesi ve düzenli güvenlik gözden geçirmeleri uygular. Hiçbir sistem mutlak güvenli olmasa da, yetkisiz erişim, kayıp ve değişiklik risklerini azaltmak için endüstri standardı önlemler alınır. Şüpheli bir güvenlik olayında, mevzuatın öngördüğü hallerde ilgili kişiler ve yetkili otoriteler bilgilendirilir.
+      </p>
+
+      <h2>9. Haklarınız (KVKK)</h2>
+      <p>KVKK’nın 11. maddesi uyarınca aşağıdaki haklara sahipsiniz:</p>
+      <ul>
+        <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme.</li>
+        <li>İşlenmişse buna ilişkin bilgi talep etme.</li>
+        <li>İşleme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme.</li>
+        <li>Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme.</li>
+        <li>Eksik veya yanlış işlenmişse düzeltilmesini isteme.</li>
+        <li>KVKK m.7 kapsamındaki şartlarda silinmesini veya yok edilmesini isteme.</li>
+        <li>Düzeltme/silme işlemlerinin aktarıldığı üçüncü kişilere bildirilmesini isteme.</li>
+        <li>Münhasıran otomatik sistemlerle analiz edilmesi nedeniyle aleyhinize bir sonucun ortaya çıkmasına itiraz etme.</li>
+        <li>Kanuna aykırı işleme nedeniyle zarara uğramanız hâlinde zararın giderilmesini talep etme.</li>
+      </ul>
+      <p>
+        Taleplerinizi <a href="mailto:iletisim@aydemx.com" class="text-champagne underline-offset-4 hover:underline">iletisim@aydemx.com</a> adresine iletebilirsiniz. Başvurular, kimlik teyidinin ardından KVKK’da öngörülen sürelerde sonuçlandırılır.
+      </p>
+
+      <h2>10. Çocukların Gizliliği</h2>
+      <p>
+        Hizmetlerimiz 13 yaşın (veya bulunduğunuz ülkede geçerli daha yüksek yaş sınırının) altındaki çocuklara yönelik değildir. Bilerek çocuklardan kişisel veri toplamayız. Bir ebeveyn veya vasi, çocuğuna ait veri işlendiğini düşünüyorsa bize yazmalıdır; ilgili kayıtlar derhal incelenir ve silinir.
+      </p>
+
+      <h2>11. İzinler (Mobil)</h2>
+      <p>Uygulamalar, özelliğin çalışması için yalnızca gerekli işletim sistemi izinlerini ister:</p>
+      <ul>
+        <li>Mikrofon: VocaX Pro Plus’ta sesli not oluşturmak için.</li>
+        <li>Depolama / medya (gerekirse): sizin dışa aktardığınız dosyaları kaydetmek için.</li>
+        <li>İnternet erişimi: senkronizasyon, yedekleme ve yapay zeka özellikleri için.</li>
+        <li>Bildirimler: yalnızca sizin açmanız halinde hatırlatma ve güncelleme için.</li>
+      </ul>
+      <p>İzinleri cihaz ayarlarından geri alabilirsiniz. İzni kapatmak, ilgili özelliği kullanılamaz hale getirebilir.</p>
+
+      <h2>12. Politika Değişiklikleri</h2>
+      <p>
+        Bu politika, yasal veya ürün değişikliklerini yansıtmak üzere güncellenebilir. Önemli değişikliklerde uygulama içi bildirim, mağaza açıklaması veya web sitesi üzerinden duyuru yapılır. Sayfanın üstündeki “Son güncelleme” tarihi esas alınır.
+      </p>
+
+      <h2>13. İletişim</h2>
+      <p>
+        AydemX<br />
+        E-posta: <a href="mailto:iletisim@aydemx.com" class="text-champagne underline-offset-4 hover:underline">iletisim@aydemx.com</a><br />
+        Web: <a href="#landing" class="text-champagne underline-offset-4 hover:underline">aydemx.com</a>
+      </p>
+      <p>
+        Google Play Console inceleme ekibi ve kullanıcılar, bu belgedeki uygulamalar hakkında ek bilgi talep ederse aynı e-posta üzerinden yanıtlanır.
+      </p>
+    </article>
+
+    <footer class="border-t border-white/[0.06]">
+      <div class="mx-auto flex max-w-3xl flex-col items-center justify-between gap-3 px-6 py-7 text-center sm:flex-row sm:px-8 sm:text-left">
+        <p class="text-[12px] text-mist/70">© 2026 AydemX. Tüm hakları saklıdır.</p>
+        <a href="mailto:iletisim@aydemx.com" class="text-[12px] font-medium text-mist transition hover:text-ivory">iletisim@aydemx.com</a>
+      </div>
+    </footer>
+  </section>
+  <script>
+    function syncDocumentTitle() {
+      document.title = location.hash === "#gizlilik"
+        ? "Gizlilik Politikası (Privacy Policy) | AydemX"
+        : "AydemX — Yapay Zeka Destekli Yeni Nesil Yazılımlar | Çok Yakında";
+    }
+    window.addEventListener("hashchange", syncDocumentTitle);
+    syncDocumentTitle();
+  </script>
+</body>
+</html>
