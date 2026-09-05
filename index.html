@@ -23,7 +23,7 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23E8D5A3'/%3E%3Cstop offset='100%25' stop-color='%23C9A86A'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%230D0D11'/%3E%3Crect x='2' y='2' width='60' height='60' rx='14' fill='none' stroke='url(%23g)' stroke-width='1.5'/%3E%3Ctext x='32' y='42' text-anchor='middle' fill='url(%23g)' font-size='28' font-family='Georgia,serif' font-weight='700'%3EAX%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -41,8 +41,7 @@
           fontFamily: {
             sans: ["Plus Jakarta Sans", "system-ui", "Segoe UI", "sans-serif"],
             display: ["Syne", "Plus Jakarta Sans", "sans-serif"],
-            inter: ["Inter", "Plus Jakarta Sans", "sans-serif"],
-            outfit: ["Outfit", "Plus Jakarta Sans", "sans-serif"]
+            brand: ["Manrope", "Plus Jakarta Sans", "sans-serif"]
           },
           boxShadow: {
             glow: "0 0 80px rgba(201, 168, 106, 0.18)",
@@ -165,18 +164,25 @@
     .brand-word {
       line-height: 1;
       white-space: nowrap;
-      font-family: Inter, Plus Jakarta Sans, sans-serif;
-      font-weight: 500;
-      letter-spacing: 0.06em;
+      font-family: Manrope, Plus Jakarta Sans, sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.01em;
     }
 
     .brand-word .brand-a,
     .brand-word .brand-x {
-      font-weight: 750;
+      font-weight: 800;
     }
 
     .brand-word.is-silver {
-      background: linear-gradient(180deg, #F5F6F8 0%, #C5CAD1 62%, #8E949C 100%);
+      background: linear-gradient(180deg, #FFFFFF 0%, #E4E8EE 38%, #B7BEC8 72%, #8B949F 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .brand-word .brand-x {
+      background: linear-gradient(180deg, #E8F1F8 0%, #8FB4D4 52%, #4A7DA8 100%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -353,9 +359,9 @@
   <div id="landing" class="page min-h-screen flex flex-col">
     <header class="w-full">
       <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6 sm:px-8 sm:py-8">
-        <a href="#landing" class="group flex items-center gap-3.5" aria-label="AydemiX ana sayfa">
+        <a href="#landing" class="group flex items-center gap-3.5" aria-label="AydemX ana sayfa">
           <img class="logo-blend logo-blend-nav" src="aydemx-mark.png" alt="" />
-          <span class="brand-word is-silver text-[1.55rem] sm:text-[1.75rem]"><span class="brand-a">A</span>ydemi<span class="brand-x">X</span></span>
+          <span class="brand-word is-silver text-[1.55rem] sm:text-[1.75rem]"><span class="brand-a">A</span>ydem<span class="brand-x">X</span></span>
         </a>
         <div class="hidden items-center gap-2 text-[11px] font-medium uppercase tracking-[0.18em] text-mist/70 sm:flex">
           <i class="fa-solid fa-shield-halved text-gold/80" aria-hidden="true"></i>
@@ -366,9 +372,9 @@
 
     <main class="flex flex-1 flex-col items-center justify-center px-6 pb-16 pt-6 sm:px-8 sm:pb-20 sm:pt-4">
       <div class="mx-auto flex w-full max-w-4xl flex-col items-center text-center">
-        <a href="#landing" class="fade-up d1 mb-8 flex flex-col items-center gap-3 no-underline sm:mb-10 sm:gap-4" aria-label="AydemiX">
+        <a href="#landing" class="fade-up d1 mb-8 flex flex-col items-center gap-3 no-underline sm:mb-10 sm:gap-4" aria-label="AydemX">
           <img class="logo-blend logo-blend-hero" src="aydemx-mark.png" alt="" />
-          <span class="brand-word is-silver text-[2rem] sm:text-[2.55rem] md:text-[2.85rem]"><span class="brand-a">A</span>ydemi<span class="brand-x">X</span></span>
+          <span class="brand-word is-silver text-[2rem] sm:text-[2.55rem] md:text-[2.85rem]"><span class="brand-a">A</span>ydem<span class="brand-x">X</span></span>
         </a>
         <div class="status-badge fade-up d2 mb-8 inline-flex max-w-full items-center gap-2.5 rounded-full border border-gold/25 px-4 py-2 text-left backdrop-blur-md sm:px-5">
           <span class="text-base leading-none" aria-hidden="true">🛠️</span>
@@ -442,9 +448,9 @@
   <section id="gizlilik" class="page min-h-screen" aria-labelledby="privacy-title">
     <header class="border-b border-white/[0.06]">
       <div class="mx-auto flex max-w-3xl items-center justify-between px-6 py-6 sm:px-8">
-        <a href="#landing" class="flex items-center gap-3" aria-label="AydemiX ana sayfaya dön">
+        <a href="#landing" class="flex items-center gap-3" aria-label="AydemX ana sayfaya dön">
           <img class="logo-blend logo-blend-sm" src="aydemx-mark.png" alt="" />
-          <span class="brand-word is-silver text-[1.2rem]"><span class="brand-a">A</span>ydemi<span class="brand-x">X</span></span>
+          <span class="brand-word is-silver text-[1.2rem]"><span class="brand-a">A</span>ydem<span class="brand-x">X</span></span>
         </a>
         <a href="#landing" class="text-[12px] font-medium text-mist transition hover:text-ivory">
           <i class="fa-solid fa-arrow-left mr-1.5" aria-hidden="true"></i>Ana sayfa
