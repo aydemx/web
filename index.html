@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0D0D11" />
+  <meta name="theme-color" content="#1C1C22" />
   <meta name="color-scheme" content="dark" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="AydemX" />
@@ -23,7 +23,7 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23E8D5A3'/%3E%3Cstop offset='100%25' stop-color='%23C9A86A'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%230D0D11'/%3E%3Crect x='2' y='2' width='60' height='60' rx='14' fill='none' stroke='url(%23g)' stroke-width='1.5'/%3E%3Ctext x='32' y='42' text-anchor='middle' fill='url(%23g)' font-size='28' font-family='Georgia,serif' font-weight='700'%3EAX%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -40,7 +40,9 @@
           },
           fontFamily: {
             sans: ["Plus Jakarta Sans", "system-ui", "Segoe UI", "sans-serif"],
-            display: ["Syne", "Plus Jakarta Sans", "sans-serif"]
+            display: ["Syne", "Plus Jakarta Sans", "sans-serif"],
+            inter: ["Inter", "Plus Jakarta Sans", "sans-serif"],
+            outfit: ["Outfit", "Plus Jakarta Sans", "sans-serif"]
           },
           boxShadow: {
             glow: "0 0 80px rgba(201, 168, 106, 0.18)",
@@ -59,7 +61,7 @@
 
     html,
     body {
-      background: #0D0D11;
+      background: #1C1C22;
       color: #F4F1EA;
     }
 
@@ -78,10 +80,10 @@
       pointer-events: none;
       z-index: 0;
       background:
-        radial-gradient(900px 520px at 50% -8%, rgba(201, 168, 106, 0.14), transparent 58%),
-        radial-gradient(620px 420px at 88% 18%, rgba(92, 78, 140, 0.16), transparent 62%),
-        radial-gradient(520px 360px at 8% 78%, rgba(201, 168, 106, 0.07), transparent 70%),
-        #0D0D11;
+        radial-gradient(720px 420px at 50% 18%, rgba(170, 186, 204, 0.09), transparent 62%),
+        radial-gradient(560px 380px at 88% 12%, rgba(58, 86, 122, 0.14), transparent 64%),
+        radial-gradient(480px 340px at 10% 80%, rgba(120, 140, 160, 0.05), transparent 70%),
+        #1C1C22;
     }
 
     .grid-veil {
@@ -101,7 +103,7 @@
       inset: 0;
       pointer-events: none;
       z-index: 1;
-      opacity: 0.045;
+      opacity: 0.07;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     }
 
@@ -110,9 +112,46 @@
       z-index: 2;
     }
 
+    .logo-blend {
+      display: block;
+      width: auto;
+      mix-blend-mode: screen;
+      filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.38));
+    }
+
+    .logo-blend-hero {
+      width: min(72vw, 280px);
+    }
+
+    .logo-blend-nav {
+      height: 3.35rem;
+      width: auto;
+    }
+
+    .logo-blend-sm {
+      height: 2.4rem;
+      width: auto;
+    }
+
     .logo-mark {
-      box-shadow: 0 0 0 1px rgba(201, 168, 106, 0.35), 0 0 28px rgba(201, 168, 106, 0.22);
+      transition: box-shadow 0.3s ease, border-radius 0.3s ease, background 0.3s ease;
+    }
+
+    .logo-mark.is-bare {
+      background: transparent;
+      box-shadow: none;
+      overflow: visible;
+    }
+
+    .logo-mark.is-module {
+      background: #101014;
+      box-shadow: 0 0 0 1px rgba(214, 211, 204, 0.28), 0 0 24px rgba(180, 186, 198, 0.12);
       animation: markPulse 4.8s ease-in-out infinite;
+    }
+
+    .logo-mark.is-soft {
+      background: transparent;
+      box-shadow: 0 0 28px rgba(196, 202, 210, 0.12);
     }
 
     .logo-word {
@@ -123,9 +162,78 @@
       text-shadow: 0 0 28px rgba(201, 168, 106, 0.22);
     }
 
+    .brand-word {
+      line-height: 1;
+      white-space: nowrap;
+      font-family: Inter, Plus Jakarta Sans, sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+    }
+
+    .brand-word .brand-a,
+    .brand-word .brand-x {
+      font-weight: 750;
+    }
+
+    .brand-word.is-silver {
+      background: linear-gradient(180deg, #F5F6F8 0%, #C5CAD1 62%, #8E949C 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .brand-word.is-cobalt {
+      background: linear-gradient(180deg, #E8EEF8 0%, #7A96CC 55%, #3D6DCC 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .brand-word.is-chrome {
+      background: linear-gradient(180deg, #FFFFFF 0%, #C8CCD2 58%, #6E737A 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .brand-word.is-gold {
+      background: linear-gradient(180deg, #F7E7C0 0%, #C9A86A 70%, #8C6E38 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .brand-word.is-emerald {
+      background: linear-gradient(180deg, #E4F4EE 0%, #5EAEA0 58%, #2F7A6E 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .brand-word.is-amber {
+      background: linear-gradient(180deg, #F6E6C8 0%, #D4A24A 60%, #8A5A18 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .brand-word.is-violet {
+      background: linear-gradient(180deg, #F0E8F8 0%, #A78BCC 58%, #6B4A9A 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .brand-word.is-ice {
+      background: linear-gradient(180deg, #F2F7FC 0%, #8FB4D6 58%, #3E6F98 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
     @keyframes markPulse {
-      0%, 100% { box-shadow: 0 0 0 1px rgba(201, 168, 106, 0.32), 0 0 22px rgba(201, 168, 106, 0.16); }
-      50% { box-shadow: 0 0 0 1px rgba(232, 213, 163, 0.55), 0 0 36px rgba(201, 168, 106, 0.34); }
+      0%, 100% { box-shadow: 0 0 0 1px rgba(214, 211, 204, 0.24), 0 0 18px rgba(180, 186, 198, 0.1); }
+      50% { box-shadow: 0 0 0 1px rgba(232, 230, 226, 0.42), 0 0 28px rgba(61, 109, 204, 0.16); }
     }
 
     .hero-title {
@@ -184,7 +292,7 @@
       inset: 0;
       z-index: 30;
       overflow-y: auto;
-      background: #0D0D11;
+      background: #1C1C22;
     }
 
     body:has(#gizlilik:target) #landing {
@@ -218,6 +326,16 @@
       margin-top: 0.35rem;
     }
 
+    .logo-pick {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.015));
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    }
+
+    .logo-pick[aria-pressed="true"] {
+      border-color: rgba(180, 186, 198, 0.55);
+      box-shadow: 0 0 22px rgba(61, 109, 204, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+
     @media (prefers-reduced-motion: reduce) {
       .fade-up,
       .logo-mark,
@@ -235,23 +353,9 @@
   <div id="landing" class="page min-h-screen flex flex-col">
     <header class="w-full">
       <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6 sm:px-8 sm:py-8">
-        <a href="#landing" class="group flex items-center gap-3" aria-label="AydemX ana sayfa">
-          <span class="logo-mark relative flex h-11 w-11 items-center justify-center rounded-2xl bg-[#121218] ring-1 ring-gold/40">
-            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M13 3.2L21.4 22.2H17.85L16.15 18.05H9.85L8.15 22.2H4.6L13 3.2Z" fill="url(#axg)" />
-              <path d="M11.15 14.85H14.85L13 10.2L11.15 14.85Z" fill="#0D0D11" />
-              <defs>
-                <linearGradient id="axg" x1="4.6" y1="3.2" x2="21.4" y2="22.2" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#F7E7C0" />
-                  <stop offset="1" stop-color="#C9A86A" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </span>
-          <span class="flex flex-col leading-none">
-            <span class="logo-word font-display text-[1.35rem] font-extrabold tracking-tight">AydemX</span>
-            <span class="mt-1 text-[10px] font-medium uppercase tracking-[0.22em] text-mist/80">Yazılım · İstanbul</span>
-          </span>
+        <a href="#landing" class="group flex items-center gap-3.5" aria-label="AydemiX ana sayfa">
+          <img class="logo-blend logo-blend-nav" src="aydemx-mark.png" alt="" />
+          <span class="brand-word is-silver text-[1.55rem] sm:text-[1.75rem]"><span class="brand-a">A</span>ydemi<span class="brand-x">X</span></span>
         </a>
         <div class="hidden items-center gap-2 text-[11px] font-medium uppercase tracking-[0.18em] text-mist/70 sm:flex">
           <i class="fa-solid fa-shield-halved text-gold/80" aria-hidden="true"></i>
@@ -262,26 +366,32 @@
 
     <main class="flex flex-1 flex-col items-center justify-center px-6 pb-16 pt-6 sm:px-8 sm:pb-20 sm:pt-4">
       <div class="mx-auto flex w-full max-w-4xl flex-col items-center text-center">
-        <div class="status-badge fade-up d1 mb-8 inline-flex max-w-full items-center gap-2.5 rounded-full border border-gold/25 px-4 py-2 text-left backdrop-blur-md sm:px-5">
+        <a href="#landing" class="fade-up d1 mb-8 flex flex-col items-center gap-3 no-underline sm:mb-10 sm:gap-4" aria-label="AydemiX">
+          <img class="logo-blend logo-blend-hero" src="aydemx-mark.png" alt="" />
+          <span class="brand-word is-silver text-[2rem] sm:text-[2.55rem] md:text-[2.85rem]"><span class="brand-a">A</span>ydemi<span class="brand-x">X</span></span>
+        </a>
+        <div class="status-badge fade-up d2 mb-8 inline-flex max-w-full items-center gap-2.5 rounded-full border border-gold/25 px-4 py-2 text-left backdrop-blur-md sm:px-5">
           <span class="text-base leading-none" aria-hidden="true">🛠️</span>
           <span class="text-[12px] font-semibold tracking-wide text-champagne sm:text-[13px]">Geliştirme Aşamasında / Google Play Store Entegrasyonu Başladı</span>
         </div>
 
-        <h1 class="hero-title fade-up d2 font-display text-[2.05rem] font-extrabold leading-[1.12] text-ivory sm:text-5xl md:text-[3.35rem]">
+        <h1 class="hero-title fade-up d3 font-display text-[2.05rem] font-extrabold leading-[1.12] text-ivory sm:text-5xl md:text-[3.35rem]">
           Yapay Zeka Destekli Yeni Nesil Yazılımlar <span class="logo-word">Çok Yakında</span>
         </h1>
 
-        <p class="fade-up d3 mx-auto mt-6 max-w-2xl text-[1.05rem] font-medium leading-relaxed text-mist sm:text-lg">
-          Sesli Düşün, Şık Not Al. İşlerinizi, borç ve alacaklarınızı yapay zeka gücüyle zahmetsizce yönetin.
-        </p>
+        <div class="fade-up d4 mx-auto mt-6 flex max-w-2xl flex-col gap-3 text-[1.05rem] font-medium leading-relaxed text-mist sm:text-lg">
+          <p>Sesli düşün, şık not al. Muhteşem özellikler ile tek tuşla not alın; kolay, zahmetsiz ve keyifli. Yakında</p>
+          <p>İşleri ve borç takibini yapmak hiç bu kadar kolay, detaylı ve zahmetsiz olmamıştı. Yakında</p>
+          <p>Çok daha fazlası çok yakında.</p>
+        </div>
 
-        <div class="fade-up d4 mt-8 flex flex-wrap items-center justify-center gap-3">
+        <div class="fade-up d5 mt-8 flex flex-wrap items-center justify-center gap-3">
           <span class="rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-champagne/90">VocaX Pro Plus</span>
           <span class="h-1 w-1 rounded-full bg-gold/50" aria-hidden="true"></span>
           <span class="rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-champagne/90">Cari Pro Plus</span>
         </div>
 
-        <div class="fade-up d5 mt-12 flex w-full max-w-xl flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
+        <div class="mt-12 flex w-full max-w-xl flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
           <button type="button" disabled aria-disabled="true" class="store-btn group flex cursor-not-allowed items-center justify-between gap-4 rounded-2xl border border-white/10 px-5 py-4 opacity-70 sm:flex-1">
             <span class="flex items-center gap-3.5">
               <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-white/[0.06] text-champagne">
@@ -326,25 +436,15 @@
         </div>
       </div>
     </footer>
+
   </div>
 
   <section id="gizlilik" class="page min-h-screen" aria-labelledby="privacy-title">
     <header class="border-b border-white/[0.06]">
       <div class="mx-auto flex max-w-3xl items-center justify-between px-6 py-6 sm:px-8">
-        <a href="#landing" class="flex items-center gap-3" aria-label="AydemX ana sayfaya dön">
-          <span class="logo-mark relative flex h-10 w-10 items-center justify-center rounded-2xl bg-[#121218] ring-1 ring-gold/40">
-            <svg width="22" height="22" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M13 3.2L21.4 22.2H17.85L16.15 18.05H9.85L8.15 22.2H4.6L13 3.2Z" fill="url(#axg2)" />
-              <path d="M11.15 14.85H14.85L13 10.2L11.15 14.85Z" fill="#0D0D11" />
-              <defs>
-                <linearGradient id="axg2" x1="4.6" y1="3.2" x2="21.4" y2="22.2" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#F7E7C0" />
-                  <stop offset="1" stop-color="#C9A86A" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </span>
-          <span class="logo-word font-display text-lg font-extrabold tracking-tight">AydemX</span>
+        <a href="#landing" class="flex items-center gap-3" aria-label="AydemiX ana sayfaya dön">
+          <img class="logo-blend logo-blend-sm" src="aydemx-mark.png" alt="" />
+          <span class="brand-word is-silver text-[1.2rem]"><span class="brand-a">A</span>ydemi<span class="brand-x">X</span></span>
         </a>
         <a href="#landing" class="text-[12px] font-medium text-mist transition hover:text-ivory">
           <i class="fa-solid fa-arrow-left mr-1.5" aria-hidden="true"></i>Ana sayfa
@@ -488,6 +588,7 @@
     }
     window.addEventListener("hashchange", syncDocumentTitle);
     syncDocumentTitle();
+
   </script>
 </body>
 </html>
